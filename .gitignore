@@ -5,3 +5,5 @@
 /.eunit/
 rebar
 datadir/
+.kitchen/
+.kitchen.local.yml
