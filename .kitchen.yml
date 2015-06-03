@@ -1,6 +1,10 @@
 ---
 driver:
   name: vagrant
+  network:
+    - ["private_network", {ip: "10.0.54.32"}]
+  synced_folders:
+    - [".", "/home/vagrant/epgsql", "create: true"]
 
 provisioner:
   name: chef_solo

@@ -2,6 +2,10 @@ DEPENDENCIES
   apt
   epgsql
     path: cookbooks/epgsql
+  erlang
+    git: git://github.com/opscode-cookbooks/erlang.git
+    revision: ffe7d679f59ea10167fefdbed4b89e3a68c7e939
+    tag: v1.5.8
   postgresql
     git: git://github.com/hw-cookbooks/postgresql.git
     revision: 7f061a3dd229c5ce12e3dc476e438dee9d9a6308
@@ -14,9 +18,20 @@ GRAPH
   epgsql (0.1.0)
     apt (>= 0.0.0)
     postgresql (>= 0.0.0)
+  erlang (1.5.8)
+    apt (>= 1.7.0)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+    yum-erlang_solutions (>= 0.0.0)
   openssl (4.0.0)
     chef-sugar (>= 0.0.0)
   postgresql (3.4.20)
     apt (>= 1.9.0)
     build-essential (>= 0.0.0)
     openssl (~> 4.0.0)
+  yum (3.6.0)
+  yum-epel (0.6.0)
+    yum (~> 3.0)
+  yum-erlang_solutions (0.2.0)
+    yum (~> 3.0)
